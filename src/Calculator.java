@@ -144,7 +144,11 @@ public class Calculator implements ActionListener {
                     result = num1 / num2;
                     break;
             }
-            textfield.setText(String.valueOf(result));
+            if (result == (int) result ) {
+                textfield.setText(String.valueOf( (int) result));
+            } else {
+                textfield.setText(String.valueOf(result));
+            }
             num1 = result;
         }
         if (e.getSource() == clrButton) {
